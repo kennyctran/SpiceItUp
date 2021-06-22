@@ -1,4 +1,5 @@
 function countWords(inputTextWords = []) {
+  console.log(inputTextWords)
   return inputTextWords.length;
 }
 

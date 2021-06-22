@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import generateStats from './helpers/generateStats';
 
 const App = () => {
+  const textToBeRead = useRef('');
+  const handleInputChange = () => {
+    console.log(generateStats(textToBeRead.current.value));
+  }
   return (
     <>
       <main>
         <div className="textInputContainer">
           <form>
-            <textarea aria-label="text input" />
+            <textarea aria-label="text input" ref={textToBeRead} onChange={handleInputChange}/>
             <button type="button" className="submitText">Submit</button>
           </form>
         </div>
