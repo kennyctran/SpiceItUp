@@ -1,4 +1,4 @@
-function countCharacters(inputText) {
+function countCharacters(inputText = '') {
   return inputText.length;
 }
 
