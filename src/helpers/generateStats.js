@@ -4,18 +4,18 @@ import countParagraphs from './countParagraphs';
 import countBigrams from './countBigrams';
 import checkSentences from './checkSentences';
 import checkVanity from './checkVanity';
+import { isNaN } from 'lodash';
 
-function generateStats(inputText = '') {
-  console.log(inputText)
-  const individualWords = inputText.split(/(\s|\n|\t|\r)/).filter((word) => word !== '' && word !== ' ');
+function generateStats(inputText = '', individualWords = []) {
   const sentences = checkSentences(individualWords);
+  const vanity = checkVanity(individualWords);
   return {
     characters: countCharacters(inputText),
     words: countWords(individualWords),
     paragraphs: countParagraphs(inputText),
     bigrams: countBigrams(individualWords),
     sentences,
-    vanity: ((checkVanity(individualWords) / sentences) * 100)
+    vanity
   }
 }
 

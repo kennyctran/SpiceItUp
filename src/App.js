@@ -1,11 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import generateStats from './helpers/generateStats';
+import defaultStatsState from './default/defaultStatsState';
+import { throttle } from 'lodash';
 
 const App = () => {
   const textToBeRead = useRef('');
-  const handleInputChange = () => {
-    console.log(generateStats(textToBeRead.current.value));
-  }
+  const [words, setWords] = useState([])
+  const [stats, setStats] = useState(defaultStatsState);
+
+  const handleInputChange = throttle(() => {
+    const individualWords = textToBeRead.current.value.split(/(\s|\n|\t|\r)/).filter((word) => word !== '' && word !== ' ');
+    setWords(individualWords);
+    setStats(generateStats(textToBeRead.current.value, individualWords));
+  }, 300, { leading: false });
+
   return (
     <>
       <main>
@@ -16,15 +24,12 @@ const App = () => {
           </form>
         </div>
         <div className="statsContainer">
-          <p>Characters: </p>
-          <p>Words: </p>
-          <p>Paragraphs: </p>
-          <p>Bigrams: </p>
-          <p>Sentences: </p>
-          <p>Vanity Score: </p>
-          <ul>
-            {/* create list of top 10 or 5 most used words */}
-          </ul>
+          <p>Characters: {stats.characters}</p>
+          <p>Words: {stats.words}</p>
+          <p>Paragraphs: {stats.paragraphs}</p>
+          <p>Bigrams: {stats.bigrams}</p>
+          <p>Sentences: {stats.sentences}</p>
+          <p>Vanity Score: {stats.vanity}</p>
         </div>
       </main>
       <section>
