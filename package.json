@@ -1,0 +1,28 @@
+{
+  "name": "SpiceItUp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kennyctran/SpiceItUp.git",
+  "author": "Kenny Tran <kenny.tran138@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "nodemon ./server/server.js",
+    "build": "webpack --watch --mode development"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
