@@ -5,12 +5,12 @@ A one-stop-shop that takes a block of text and gives you great synonyms and rela
 ## Description
 
 SpiceItUp has a couple of features:
-  -  Character count
+  -  Character count (whitespaces count)
   -  Word count
   -  Paragraph count
   -  Sentence count
-  -  Bigrams count
-  -  Vanity count (how many times you've used I divided by sentences you've written)
+  -  Bigrams count (unique pairs of adjacent words)
+  -  Vanity count (how many times you've used "I" divided by sentences you've written)
   -  Submit the block of text to have every word checked for possible synonyms
 
 The "Spice It Up?" button consumes the [Word Associations API](https://rapidapi.com/twinword/api/word-associations/), checking for related words and synonyms.
