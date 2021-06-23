@@ -4,9 +4,21 @@
   box-sizing: border-box;
 }
 
-.inputAndStatsContainer {
+.app {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  padding: 25px
+}
+
+.inputAndStatsContainer {
+  height: 50%;
+  width: 100%;
   display: flex;
 }
 
@@ -16,6 +28,46 @@
 }
 
 .statsContainer {
+  height: 100%;
   width: 100%;
+}
+
+.replacedTextContainer {
+  height: 50%;
   width: 100%;
+}
+
+.synonymsContainer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 25px;
+  justify-content: center;
+}
+
+textarea {
+  height: 70%;
+  width: 100%;
+}
+
+[type=button] {
+  padding: 5px;
+}
+
+.statsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.synonym {
+  padding: 25px;
 }
