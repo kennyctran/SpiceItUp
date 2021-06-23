@@ -36,6 +36,12 @@ This is perfect for essays or emails that you are just hoping to spice up. No ne
 
 You will not be able to use the "Spice It Up?" button unless you have access to the Word Association API since its access is locked by an API key. If you don't want to sign up for RapidAPI, please contact me, and I can share the key with you.
 
+## Testing
+
+This application has test coverage of its counting functions to ensure input text is being correctly parsed.
+
+![test coverage](gifs/Screen Shot 2021-06-22 at 10.23.08 PM.JPG)
+
 ## Author
 
 Kenny Tran  
