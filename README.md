@@ -2,6 +2,8 @@
 
 A one-stop-shop that takes a block of text and gives you great synonyms and related words for all of them!
 
+![full application walkthrough](/gifs/fullApp.gif)
+
 ## Description
 
 SpiceItUp has a couple of features:
@@ -16,7 +18,6 @@ SpiceItUp has a couple of features:
 The "Spice It Up?" button consumes the [Word Associations API](https://rapidapi.com/twinword/api/word-associations/), checking for related words and synonyms.
 This is perfect for essays or emails that you are just hoping to spice up. No need to pick out specific words. If you input the text and see something you like, use it!
 
-![full application walkthrough](/gifs/fullApp.gif)
 
 ## Getting Started
 
