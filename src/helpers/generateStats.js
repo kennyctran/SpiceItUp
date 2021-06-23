@@ -4,11 +4,10 @@ import countParagraphs from './countParagraphs';
 import countBigrams from './countBigrams';
 import checkSentences from './checkSentences';
 import checkVanity from './checkVanity';
-import { isNaN } from 'lodash';
 
 function generateStats(inputText = '', individualWords = []) {
-  const sentences = checkSentences(individualWords);
-  const vanity = checkVanity(individualWords);
+  const sentences = checkSentences(individualWords) || 1;
+  const vanity = `${(checkVanity(individualWords) / sentences) * 100}%`;
   return {
     characters: countCharacters(inputText),
     words: countWords(individualWords),
