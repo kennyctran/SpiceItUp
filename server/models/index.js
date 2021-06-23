@@ -1,0 +1,1 @@
+exports.synonymsAPI = require('./synonymsAPI.js');
