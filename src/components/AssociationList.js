@@ -2,8 +2,8 @@ import React from 'react';
 
 function AssociationList({ entry = '', associations = [] }) {
   return (
-    <>
-      <h6>{entry}</h6>
+    <div className="synonym">
+      <h4>{entry}</h4>
       <ul>
         {associations.map((assoc, i) => {
           return (
@@ -11,7 +11,7 @@ function AssociationList({ entry = '', associations = [] }) {
           );
         })}
       </ul>
-    </>
+    </div>
   )
 }
 
