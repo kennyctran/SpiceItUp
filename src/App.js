@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <>
-      <main>
+      <main className="inputAndStatsContainer">
         <div className="textInputContainer">
           <form>
             <textarea aria-label="text input" ref={textToBeRead} onChange={handleInputChange}/>
