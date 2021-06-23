@@ -1,15 +1,15 @@
 const axios = require('axios');
-
+require('dotenv').config();
 
 module.exports = {
   fetchSynonyms: async (word = '') => {
     const options = {
       method: 'GET',
-      url: 'https://twinword-word-associations-v1.p.rapidapi.com/associations/',
+      url: process.env.URL,
       params: {entry: word},
       headers: {
-        'x-rapidapi-key': '3f5f84ebd2msha9cabf3c3dccc52p113198jsnf7b5068c48df',
-        'x-rapidapi-host': 'twinword-word-associations-v1.p.rapidapi.com'
+        'x-rapidapi-key': process.env.RAPID_API_KEY,
+        'x-rapidapi-host': process.env.RAPID_API_HOST
       }
     };
     const { data } = await axios.request(options);
