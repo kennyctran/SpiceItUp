@@ -1,6 +1,6 @@
 # SpiceItUp
 
-A one-stop-shop that takes a block of text and gives you great synonyms and related words for all of them!
+A one-stop-shop that counts your text and also takes a block of text to give you great synonyms and related words!
 
 ![typing and seeing wordcounts change](gifs/typing.gif)
 
