@@ -40,7 +40,7 @@ You will not be able to use the "Spice It Up?" button unless you have access to 
 
 This application has test coverage of its counting functions to ensure input text is being correctly parsed.
 
-![test coverage](gifs/Screen Shot 2021-06-22 at 10.23.08 PM.JPG)
+![test coverage](gifs/testcoverage.jpg)
 
 ## Author
 
